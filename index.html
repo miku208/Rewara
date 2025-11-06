@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Bot CRACK GRUB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">MH</div>
+            <h1 class="title">Telegram Bot CRACK GRUB</h1>
+            <p class="subtitle">MikuHost Develop • FREE ONLY</p>
+            <div class="status">Status: Aktif</div>
+            
+            <!-- Tambahkan Support Contact di sini -->
+            <div class="support-contact">
+                <div class="support-info">
+                    <i class="fas fa-headset"></i>
+                    <span>Butuh Bantuan? Hubungi Support:</span>
+                </div>
+                <a href="https://t.me/MikuHost" target="_blank" class="support-link">
+                    <i class="fab fa-telegram"></i>
+                    @MikuHost
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="input-group">
+                <label for="botToken"><i class="fas fa-key"></i> Token Bot</label>
+                <input type="text" id="botToken" placeholder="Masukkan token bot Anda...">
+            </div>
+
+            <div class="input-group">
+                <label for="groupSelect"><i class="fas fa-users"></i> Pilih Grup</label>
+                <select id="groupSelect">
+                    <option value="">-- Pilih grup --</option>
+                </select>
+            </div>
+
+            <div class="button-grid">
+                <button class="btn" onclick="checkBotName()">
+                    <i class="fas fa-robot"></i> Cek Nama Bot
+                </button>
+                <button class="btn" onclick="discoverGroups()">
+                    <i class="fas fa-search"></i> Discover Groups
+                </button>
+                <button class="btn" onclick="showMessageInput()">
+                    <i class="fas fa-paper-plane"></i> Kirim Pesan
+                </button>
+                <button class="btn" onclick="showPhotoInput()">
+                    <i class="fas fa-image"></i> Kirim Foto
+                </button>
+                <button class="btn" onclick="showGroupNameInput()">
+                    <i class="fas fa-edit"></i> Ubah Nama Grup
+                </button>
+                <button class="btn" onclick="showDescriptionInput()">
+                    <i class="fas fa-align-left"></i> Ubah Deskripsi
+                </button>
+                <button class="btn" onclick="showPhotoUpload()">
+                    <i class="fas fa-camera"></i> Ubah PP Grup
+                </button>
+                <button class="btn" onclick="showUsernameInput()">
+                    <i class="fas fa-at"></i> Ubah Username
+                </button>
+                <button class="btn" onclick="getGroupLink()">
+                    <i class="fas fa-link"></i> Dapatkan Link
+                </button>
+                <button class="btn" onclick="checkContacts()">
+                    <i class="fas fa-address-book"></i> Cek Kontak
+                </button>
+                <button class="btn" onclick="showContactMessageInput()">
+                    <i class="fas fa-user"></i> Kirim ke Kontak
+                </button>
+                <button class="btn" onclick="showPhotoUpload()">
+                    <i class="fas fa-upload"></i> Upload Foto
+                </button>
+                <button class="btn" onclick="showBotPhotoUpload()">
+                    <i class="fas fa-user-circle"></i> Ubah PP Bot
+                </button>
+                <button class="btn" onclick="showBotNameInput()">
+                    <i class="fas fa-robot"></i> Ubah Nama Bot
+                </button>
+            </div>
+
+            <!-- Input Sections -->
+            <div id="messageInput" class="input-group hidden">
+                <label for="messageText"><i class="fas fa-comment"></i> Pesan</label>
+                <textarea id="messageText" placeholder="Ketik pesan yang ingin dikirim..."></textarea>
+                <button class="btn" onclick="sendMessage()" style="margin-top: 10px;">
+                    <i class="fas fa-paper-plane"></i> Kirim Pesan
+                </button>
+            </div>
+
+            <div id="photoInput" class="input-group hidden">
+                <label for="photoUrl"><i class="fas fa-link"></i> URL Foto</label>
+                <input type="url" id="photoUrl" placeholder="https://example.com/photo.jpg">
+                <label for="photoCaption" style="margin-top: 15px;"><i class="fas fa-text"></i> Keterangan Foto</label>
+                <textarea id="photoCaption" placeholder="Keterangan foto (opsional)"></textarea>
+                <button class="btn" onclick="sendPhoto()" style="margin-top: 10px;">
+                    <i class="fas fa-image"></i> Kirim Foto
+                </button>
+            </div>
+
+            <div id="groupNameInput" class="input-group hidden">
+                <label for="newGroupName"><i class="fas fa-edit"></i> Nama Grup Baru</label>
+                <input type="text" id="newGroupName" placeholder="Masukkan nama grup baru...">
+                <button class="btn" onclick="editGroupName()" style="margin-top: 10px;">
+                    <i class="fas fa-save"></i> Simpan Nama
+                </button>
+            </div>
+
+            <div id="descriptionInput" class="input-group hidden">
+                <label for="newDescription"><i class="fas fa-align-left"></i> Deskripsi Baru</label>
+                <textarea id="newDescription" placeholder="Masukkan deskripsi grup baru..."></textarea>
+                <button class="btn" onclick="editDescription()" style="margin-top: 10px;">
+                    <i class="fas fa-save"></i> Simpan Deskripsi
+                </button>
+            </div>
+
+            <div id="photoUpload" class="input-group hidden">
+                <label for="groupPhoto"><i class="fas fa-upload"></i> Upload Foto</label>
+                <input type="file" id="groupPhoto" accept="image/*">
+                
+                <div class="input-group">
+                    <label for="uploadPhotoCaption"><i class="fas fa-text"></i> Keterangan Foto (Opsional)</label>
+                    <textarea id="uploadPhotoCaption" placeholder="Keterangan foto (opsional)"></textarea>
+                </div>
+                
+                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                    <button class="btn" onclick="uploadPhotoFromFile()">
+                        <i class="fas fa-image"></i> Kirim Foto ke Grup
+                    </button>
+                    <button class="btn" onclick="editGroupPhoto()">
+                        <i class="fas fa-camera"></i> Jadikan Foto Grup
+                    </button>
+                </div>
+            </div>
+
+            <div id="usernameInput" class="input-group hidden">
+                <label for="newUsername"><i class="fas fa-at"></i> Username Baru</label>
+                <input type="text" id="newUsername" placeholder="username_baru (tanpa @)">
+                <button class="btn" onclick="editUsername()" style="margin-top: 10px;">
+                    <i class="fas fa-save"></i> Simpan Username
+                </button>
+            </div>
+
+            <!-- Input untuk kontak -->
+            <div id="contactMessageInput" class="input-group hidden">
+                <div class="input-group">
+                    <label for="contactSelect"><i class="fas fa-user"></i> Pilih Kontak</label>
+                    <select id="contactSelect">
+                        <option value="">-- Pilih kontak --</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="contactMessageText"><i class="fas fa-comment"></i> Pesan untuk Kontak</label>
+                    <textarea id="contactMessageText" placeholder="Ketik pesan yang ingin dikirim ke kontak..."></textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label for="contactPhotoUrl"><i class="fas fa-link"></i> URL Foto (Opsional)</label>
+                    <input type="url" id="contactPhotoUrl" placeholder="https://example.com/photo.jpg">
+                </div>
+                
+                <div class="input-group">
+                    <label for="contactPhotoCaption"><i class="fas fa-text"></i> Keterangan Foto</label>
+                    <textarea id="contactPhotoCaption" placeholder="Keterangan foto (opsional)"></textarea>
+                </div>
+                
+                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                    <button class="btn" onclick="sendMessageToContact()">
+                        <i class="fas fa-paper-plane"></i> Kirim Pesan
+                    </button>
+                    <button class="btn" onclick="sendPhotoToContact()">
+                        <i class="fas fa-image"></i> Kirim Foto
+                    </button>
+                </div>
+            </div>
+
+            <!-- Input untuk ubah PP Bot -->
+            <div id="botPhotoUpload" class="input-group hidden">
+                <label for="botPhoto"><i class="fas fa-user-circle"></i> Upload Foto Profil Bot</label>
+                <input type="file" id="botPhoto" accept="image/*">
+                <p style="color: var(--text-secondary); font-size: 0.8rem; margin-top: 5px;">
+                    <i class="fas fa-info-circle"></i> Ukuran foto disarankan 512x512 pixels (Max 10MB)
+                </p>
+                <button class="btn" onclick="editBotPhoto()" style="margin-top: 10px;">
+                    <i class="fas fa-save"></i> Ubah Foto Profil Bot
+                </button>
+            </div>
+
+            <div id="botNameInput" class="input-group hidden">
+                <label for="newBotName"><i class="fas fa-robot"></i> Nama Bot Baru</label>
+                <input type="text" id="newBotName" placeholder="Masukkan nama bot baru...">
+                <p style="color: var(--text-secondary); font-size: 0.8rem; margin-top: 5px;">
+                    <i class="fas fa-info-circle"></i> Nama bot akan berubah di semua chat
+                </p>
+                <button class="btn" onclick="editBotName()" style="margin-top: 10px;">
+                    <i class="fas fa-save"></i> Ubah Nama Bot
+                </button>
+            </div>
+
+            <!-- Output Section -->
+            <div class="output" id="output">
+                {"status": "ready", "message": "Silakan pilih aksi yang diinginkan..."}
+            </div>
+
+            <!-- Support Footer -->
+            <div class="support-footer">
+                <p>
+                    <i class="fas fa-question-circle"></i>
+                    Ada masalah? Hubungi support Telegram: 
+                    <a href="https://t.me/MikuHost" target="_blank" class="support-link">
+                        <i class="fab fa-telegram"></i> @MikuHost
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
